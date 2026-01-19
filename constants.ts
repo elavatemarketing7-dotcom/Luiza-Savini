@@ -2,7 +2,7 @@
 export const EXPERT_DATA = {
   name: "Luiza Savini",
   profession: "Harmonização Facial",
-  whatsapp: "https://api.whatsapp.com/send?phone=5511979653139",
+  whatsapp: "https://wa.me/5511979653139",
   instagram: "https://www.instagram.com/draluizasavini/",
   address: "São Paulo, SP"
 };

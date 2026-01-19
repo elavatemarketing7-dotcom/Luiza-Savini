@@ -26,7 +26,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-[#f5f5f5]">
+    <div className="min-h-screen bg-[#fdfaf7] text-[#2c1810]">
       {view === 'CHOICE' && (
         <ChoiceScreen 
           onStartQuiz={handleStartQuiz} 

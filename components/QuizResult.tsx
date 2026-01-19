@@ -13,57 +13,57 @@ export const QuizResult: React.FC<Props> = ({ onContinue, answers }) => {
   );
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center p-4 text-center">
-      <div className="w-full max-w-md bg-stone-900 rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 relative">
+    <div className="min-h-screen bg-[#fdfaf7] flex flex-col items-center justify-center p-4 text-center">
+      <div className="w-full max-w-sm bg-white rounded-[2.5rem] overflow-hidden shadow-2xl border border-stone-100 relative">
         
-        {/* Header Image with Gradient */}
-        <div className="relative h-72 w-full">
+        {/* Compact Header Image */}
+        <div className="relative h-48 w-full">
           <img src={IMAGES.secondary} alt={EXPERT_DATA.name} className="w-full h-full object-cover object-top" />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent"></div>
           
-          <div className="absolute bottom-6 left-0 w-full px-6">
-            <span className="bg-[#d4af37] text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-2 inline-block">
+          <div className="absolute bottom-4 left-0 w-full px-5 text-left">
+            <span className="bg-[#4a3728] text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest mb-1.5 inline-block">
               Perfil Compatível
             </span>
-            <h2 className="text-3xl font-serif text-white">Você é a Paciente Ideal.</h2>
+            <h2 className="text-2xl font-serif text-stone-900 leading-tight">Você é a Paciente Ideal.</h2>
           </div>
         </div>
 
-        <div className="p-8 space-y-6">
-          <p className="text-white/70 text-base leading-relaxed">
-            Com base nas suas respostas, o Método da <span className="text-[#d4af37] font-bold">Dra. {EXPERT_DATA.name}</span> consegue entregar exatamente a naturalidade e segurança que você procura.
+        <div className="p-6 space-y-4">
+          <p className="text-stone-600 text-sm leading-relaxed px-2">
+            O Método da <span className="text-[#4a3728] font-bold">Dra. {EXPERT_DATA.name}</span> é a solução perfeita para a naturalidade que você busca.
           </p>
 
-          <div className="space-y-4 pt-2">
+          <div className="space-y-3 pt-1">
             <a 
-              href={`${EXPERT_DATA.whatsapp}&text=${whatsappMsg}`}
+              href={`${EXPERT_DATA.whatsapp}?text=${whatsappMsg}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-[#25D366] text-white font-bold py-5 rounded-2xl shadow-xl transform active:scale-95 transition-all text-sm uppercase tracking-wider animate-pulse"
+              className="block w-full bg-[#25D366] text-white font-bold py-4 rounded-xl shadow-lg transform active:scale-95 transition-all text-xs uppercase tracking-wider animate-pulse"
             >
-              1- Enviar minha avaliação a DRA
+              1- Enviar avaliação via WhatsApp
             </a>
 
             <a 
               href={EXPERT_DATA.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-white/10 border border-white/10 text-white font-bold py-5 rounded-2xl transform active:scale-95 transition-all text-sm uppercase tracking-wider"
+              className="block w-full bg-stone-50 border border-stone-200 text-[#4a3728] font-bold py-4 rounded-xl transform active:scale-95 transition-all text-xs uppercase tracking-wider"
             >
-              2- Chamar no WhatsApp Sem Compromisso
+              2- Falar com Especialista
             </a>
 
             <button 
               onClick={onContinue}
-              className="block w-full text-white/40 font-medium py-3 rounded-2xl hover:text-white transition-colors text-sm underline"
+              className="block w-full text-stone-400 font-medium py-2 rounded-xl hover:text-[#4a3728] transition-colors text-xs underline"
             >
-              3- Não enviar e continuar no site
+              3- Ver site completo
             </button>
           </div>
         </div>
       </div>
       
-      <p className="mt-8 text-white/20 text-[10px] uppercase tracking-widest">Acesso Restrito e Exclusivo</p>
+      <p className="mt-6 text-stone-300 text-[9px] uppercase tracking-widest">Atendimento Exclusivo • Vagas Limitadas</p>
     </div>
   );
 };

@@ -16,7 +16,7 @@ export const MarqueeHeader: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-black/90 backdrop-blur-xl border-b border-white/5 overflow-hidden py-3">
+    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-stone-100 overflow-hidden py-3">
       <div className="animate-marquee whitespace-nowrap flex items-center gap-12 px-6">
         {[...Array(4)].map((_, i) => (
           <React.Fragment key={i}>
@@ -24,7 +24,7 @@ export const MarqueeHeader: React.FC = () => {
               <button
                 key={`${i}-${section.id}`}
                 onClick={() => scrollTo(section.id)}
-                className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-semibold text-white/60 hover:text-[#d4af37] transition-colors"
+                className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-bold text-stone-400 hover:text-[#4a3728] transition-colors"
               >
                 {section.label}
               </button>
